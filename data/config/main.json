@@ -1,0 +1,30 @@
+{
+  "title": "EmulatorJS",
+  "root": "main",
+  "parent": "main",
+  "display_items": 3,
+  "defaults": {
+    "emulator": "",
+    "bios": "",
+    "path": "main",
+    "rom_extension": "",
+    "video_position": "",
+    "type": "menu",
+    "has_back": true,
+    "has_corner": true,
+    "has_logo": true,
+    "has_video": true,
+    "multi_disc": 0
+  },
+  "items": {
+    "atari2600": {
+      "video_position": "left:11.5vw;top:31.5vh;width:36vw;height:43vh;"
+    },
+    "n64": {
+      "video_position": "left:11.5vw;top:30vh;width:36.3vw;height:45.5vh;"
+    },
+    "segaMD": {
+      "video_position": "left:11.5vw;top:31.5vh;width:36vw;height:43vh;"
+    }
+  }
+}

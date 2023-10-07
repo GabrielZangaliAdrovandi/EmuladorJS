@@ -1,0 +1,33 @@
+
+
+# Versão do Docker Compose
+version: "2.1"
+
+# Definição de serviços 
+services:
+  # EmuladorJS
+  emulatorjs:
+    # Imagem Docker usada para o serviço
+    image: lscr.io/linuxserver/emulatorjs:latest
+
+    # Nome do container
+    container_name: emulatorjs
+
+    
+    environment:
+      - PUID=1000       # ID do usuário no host para atribuir permissões
+      - PGID=1000       # ID do grupo no host para atribuir permissões
+      - TZ=Etc/UTC      # Fuso horário usado pelo container
+
+    # Caminho das pastas do EmuladoJS
+    volumes:
+      - /home/gabriel/Desktop/EmuladorJS/config:/config  # Cainho da pasta configurações do EmuladorJS
+      - /home/gabriel/Desktop/EmuladorJS/data:/data      # Cainho da pasta dados usados pelo EmuladorJS
+
+    
+    ports:
+      - 3000:3000  # Porta 3000 para configura o EmuladorJS
+      - 80:80      # Porta 80 para poder acessar os jogos do EmuladorJS
+
+  
+
